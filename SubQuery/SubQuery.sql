@@ -61,4 +61,8 @@ SELECT * FROM departments WHERE DEPARTMENT_ID NOT IN(select DEPARTMENT_ID FROM e
 SELECT DISTINCT SALARY FROM employees ORDER BY SALARY DESC LIMIT 3;
 #21º
 SELECT DISTINCT SALARY FROM employees ORDER BY SALARY ASC LIMIT 3;
-#22º
+#22º Não entendi muito bem o enunciado, utilizei a solução do exercicio
+SELECT *FROM employees emp1
+WHERE (1) = (SELECT COUNT(DISTINCT(emp2.salary))
+FROM employees emp2
+WHERE emp2.salary > emp1.salary);
