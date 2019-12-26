@@ -67,4 +67,8 @@ ON (J.employee_id = E.employee_id)
 WHERE salary > 10000;
 
 #13º 
-
+SELECT first_name, last_name, hire_date, salary
+FROM EMPLOYEES e
+JOIN DEPARTMENTS d
+ON e.employee_id = d.manager_id
+WHERE YEAR(CURDATE()) -YEAR(hire_date) >15;
